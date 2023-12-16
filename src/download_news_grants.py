@@ -1,5 +1,6 @@
 import asyncio
 import json
+import csv
 import requests
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup
@@ -77,7 +78,7 @@ def grant_detail(id="350938"):
         "sec-ch-ua-mobile": "?0",
         "sec-ch-ua-platform": '"Windows"',
     }
-    
+
     data = {
         "oppId": id,
     }
@@ -90,14 +91,56 @@ def grant_detail(id="350938"):
     return response.json()
 
 
+# Extracting fields
+fields_to_write = [
+    "opportunityId", "agencyDetails", "agencyName", "agencyPhone", "agencyAddressDesc",
+    "synopsisDesc", "postingDate", "archiveDate", "fundingActivityCategoryDesc",
+    "numberOfAwards", "estimatedFunding", "awardCeiling", "awardFloor",
+    "applicantEligibilityDesc", "applicantTypes", "fundingInstruments",
+    "fundingActivityCategories"
+]
+
+# Function to extract nested fields
+def extract_nested_fields(data, field):
+    value = data
+    for key in field.split('.'):
+        if isinstance(value, dict) and key in value:
+            value = value[key]
+        else:
+            return None
+    return value
+
+def output_csv(csv_filename="src/data/output.csv"):
+    # Write data to CSV
+    with open(csv_filename, mode='w', newline='', encoding='utf-8') as file:
+        writer = csv.DictWriter(file, fieldnames=fields_to_write)
+        writer.writeheader()
+
+        # Write data to CSV file
+        row = {}
+
+        with open("src/data/details.json", "r") as file:
+            full_data = json.load(file)
+
+        for data in full_data:
+            for field in fields_to_write:
+                extracted_value = extract_nested_fields(data, field)
+                row[field] = json.dumps(extracted_value) if isinstance(extracted_value, (list, dict)) else extracted_value
+            writer.writerow(row)
+
+    print(f"Data has been written to {csv_filename}")
+
+
 if __name__ == "__main__":
     # print(asyncio.run(eligibility_extractor()))
-    with open("grants.json", "w") as file:
-        file.write(json.dumps(grant_list(), indent=4))
+    # with open("src/data/grants.json", "w") as file:
+    #     file.write(json.dumps(grant_list(), indent=4))
 
-    with open("grants.json", "r") as file:
-        data = json.load(file)
+    # with open("src/data/grants.json", "r") as file:
+    #     data = json.load(file)
 
-    with open("details.json", "a") as file:
-        for grant in data:
-            file.write(json.dumps(grant_detail(grant["id"]), indent=4))
+    # with open("src/data/details.json", "a") as file:
+    #     for grant in data:
+    #         file.write(json.dumps(grant_detail(grant["id"]), indent=4))
+
+    output_csv()
