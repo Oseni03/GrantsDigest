@@ -1,0 +1,781 @@
+[
+    {
+        "id": "351465",
+        "number": "SAU90024GR0099",
+        "title": "Austrian-American Partnership Fund",
+        "agencyCode": "DOS-AUT",
+        "agency": "U.S. Mission to Austria",
+        "openDate": "12/16/2023",
+        "closeDate": "08/31/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "19.040"
+        ]
+    },
+    {
+        "id": "351535",
+        "number": "24-521",
+        "title": "Future of Semiconductors",
+        "agencyCode": "NSF",
+        "agency": "National Science Foundation",
+        "openDate": "12/16/2023",
+        "closeDate": "03/14/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "47.084",
+            "47.076",
+            "47.049",
+            "47.041",
+            "47.070"
+        ]
+    },
+    {
+        "id": "351534",
+        "number": "24-516",
+        "title": "Partnerships in Astronomy &amp; Astrophysics Research and Education",
+        "agencyCode": "NSF",
+        "agency": "National Science Foundation",
+        "openDate": "12/16/2023",
+        "closeDate": "03/12/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "47.049"
+        ]
+    },
+    {
+        "id": "351516",
+        "number": "24-520",
+        "title": "Long-Term Ecological Research",
+        "agencyCode": "NSF",
+        "agency": "National Science Foundation",
+        "openDate": "12/15/2023",
+        "closeDate": "03/14/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "47.050",
+            "47.075",
+            "47.074"
+        ]
+    },
+    {
+        "id": "351504",
+        "number": "W911NF24S0005",
+        "title": "U.S. Army Research Institute for the Behavioral and Social Sciences Broad Agency Announcement for Basic Research (Fiscal Year 2025)",
+        "agencyCode": "DOD-AMC",
+        "agency": "Dept of the Army -- Materiel Command",
+        "openDate": "12/15/2023",
+        "closeDate": "07/01/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "12.431"
+        ]
+    },
+    {
+        "id": "351518",
+        "number": "W911NF24S0004",
+        "title": "DEVCOM Army Research Laboratory  BROAD AGENCY ANNOUNCEMENT FOR  TRAPPED IONS &amp; NEUTRAL ATOMS QUANTUM COMPUTING (TINA QC)",
+        "agencyCode": "DOD-AMC",
+        "agency": "Dept of the Army -- Materiel Command",
+        "openDate": "12/15/2023",
+        "closeDate": "04/09/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "12.431"
+        ]
+    },
+    {
+        "id": "351404",
+        "number": "HM047623BAA0001",
+        "title": "Boosting Innovative GEOINT - Science &amp; Technology  Broad Agency Announcement (BIG-ST BAA)",
+        "agencyCode": "DOD-NGIA",
+        "agency": "National Geospatial-Intelligence Agency ",
+        "openDate": "12/15/2023",
+        "closeDate": "12/14/2026",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "12.630"
+        ]
+    },
+    {
+        "id": "351493",
+        "number": "PDS-BUJUMBURA-FY24-01",
+        "title": "Alumni Engagement Innovation Fund (AEIF) 2024",
+        "agencyCode": "DOS-BDI",
+        "agency": "U.S. Mission to Burundi",
+        "openDate": "12/15/2023",
+        "closeDate": "02/15/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "19.022"
+        ]
+    },
+    {
+        "id": "349430",
+        "number": "HRSA-24-047",
+        "title": "State Maternal Health Innovation",
+        "agencyCode": "HHS-HRSA",
+        "agency": "Health Resources and Services Administration",
+        "openDate": "12/15/2023",
+        "closeDate": "04/02/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "93.110"
+        ]
+    },
+    {
+        "id": "351517",
+        "number": "P23AS00504",
+        "title": "FY2023 Historic Preservation Fund - Semiquincentennial Grants",
+        "agencyCode": "DOI-NPS",
+        "agency": "National Park Service",
+        "openDate": "12/15/2023",
+        "closeDate": "03/05/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "15.904"
+        ]
+    },
+    {
+        "id": "351520",
+        "number": "SMK800-24-PAS001",
+        "title": "Alumni Engagement Innovation Fund Program FY 2024",
+        "agencyCode": "DOS-MKD",
+        "agency": "U.S. Mission to North Macedonia",
+        "openDate": "12/15/2023",
+        "closeDate": "01/30/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "19.022"
+        ]
+    },
+    {
+        "id": "351519",
+        "number": "PAR-24-055",
+        "title": "Single Source: The NIGMS Human Genetic Cell Repository (U42 - Clinical Trial Not Allowed)",
+        "agencyCode": "HHS-NIH11",
+        "agency": "National Institutes of Health",
+        "openDate": "12/15/2023",
+        "closeDate": "06/10/2026",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "93.859"
+        ]
+    },
+    {
+        "id": "351526",
+        "number": "USDA-NIFA-AFRI-010453",
+        "title": "Agriculture and Food Research Initiative Competitive Grants Program Foundational and Applied Science Program",
+        "agencyCode": "USDA-NIFA",
+        "agency": "National Institute of Food and Agriculture",
+        "openDate": "12/15/2023",
+        "closeDate": "12/31/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "10.310"
+        ]
+    },
+    {
+        "id": "351521",
+        "number": "24PR02",
+        "title": "Civility in the Correctional Workplace",
+        "agencyCode": "USDOJ-BOP-NIC",
+        "agency": "National Institute of Corrections",
+        "openDate": "12/15/2023",
+        "closeDate": "02/13/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "16.601"
+        ]
+    },
+    {
+        "id": "351529",
+        "number": "24PR01",
+        "title": "Advancing Women in Leadership",
+        "agencyCode": "USDOJ-BOP-NIC",
+        "agency": "National Institute of Corrections",
+        "openDate": "12/15/2023",
+        "closeDate": "02/13/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "16.601"
+        ]
+    },
+    {
+        "id": "349138",
+        "number": "HRSA-24-019",
+        "title": "Primary Care Training and Enhancement: Physician Assistant Rural Training in Behavioral Health (PCTE-PARB) Program",
+        "agencyCode": "HHS-HRSA",
+        "agency": "Health Resources and Services Administration",
+        "openDate": "12/15/2023",
+        "closeDate": "03/15/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "93.884"
+        ]
+    },
+    {
+        "id": "351528",
+        "number": "R24AS00447",
+        "title": "Central Valley Project Habitat &amp; Facility Improvements Year 3",
+        "agencyCode": "DOI-BOR",
+        "agency": "Bureau of Reclamation",
+        "openDate": "12/15/2023",
+        "closeDate": "03/18/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "15.512"
+        ]
+    },
+    {
+        "id": "351523",
+        "number": "72052624APS00001",
+        "title": "USAID Paraguay - Locally Led Development ADDENDUM (#22)",
+        "agencyCode": "USAID-PAR",
+        "agency": "Paraguay USAID-Asuncion",
+        "openDate": "12/15/2023",
+        "closeDate": "02/16/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "98.001"
+        ]
+    },
+    {
+        "id": "351525",
+        "number": "PAR-24-085",
+        "title": "National Cancer Institute's Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis (R01 Clinical Trial Required)",
+        "agencyCode": "HHS-NIH11",
+        "agency": "National Institutes of Health",
+        "openDate": "12/15/2023",
+        "closeDate": "01/07/2027",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "93.395",
+            "93.393",
+            "93.394",
+            "93.399"
+        ]
+    },
+    {
+        "id": "351524",
+        "number": "PAR-24-072",
+        "title": "Cancer Prevention and Control Clinical Trials Grant Program (R01 Clinical Trial Required)",
+        "agencyCode": "HHS-NIH11",
+        "agency": "National Institutes of Health",
+        "openDate": "12/15/2023",
+        "closeDate": "01/07/2027",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "93.393",
+            "93.399"
+        ]
+    },
+    {
+        "id": "351531",
+        "number": "DE-FOA-0003176",
+        "title": "Early Career Research Program",
+        "agencyCode": "PAMS-SC",
+        "agency": "Office of Science",
+        "openDate": "12/15/2023",
+        "closeDate": "04/25/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "81.049"
+        ]
+    },
+    {
+        "id": "351513",
+        "number": "7200AA24APS00002",
+        "title": "LGBTQI+ Addendum No. 4 to the JRS APS",
+        "agencyCode": "USAID",
+        "agency": "Agency for International Development",
+        "openDate": "12/15/2023",
+        "closeDate": "03/15/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "98.001"
+        ]
+    },
+    {
+        "id": "351533",
+        "number": "DOD2024APEXACCELERATOROPEN",
+        "title": "APEX Accelerator Open Announcement for New Recipient",
+        "agencyCode": "DOD-AMC-ACCAPGADA",
+        "agency": "ACC-APG-Aberdeen Division A",
+        "openDate": "12/15/2023",
+        "closeDate": "01/21/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "12.002"
+        ]
+    },
+    {
+        "id": "350454",
+        "number": "RFA-DP-24-062",
+        "title": "Health Promotion and Disease Prevention Research Centers: 2024 Special Interest Project Competitive Supplements (SIPS)",
+        "agencyCode": "HHS-CDC-HHSCDCERA",
+        "agency": "Centers for Disease Control and Prevention - ERA",
+        "openDate": "12/15/2023",
+        "closeDate": "03/04/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "93.135"
+        ]
+    },
+    {
+        "id": "351488",
+        "number": "EPA-REG7-WPDG-23-01",
+        "title": "Region 7 Fiscal Year 23-24 Wetland Program Development Grants",
+        "agencyCode": "EPA",
+        "agency": "Environmental Protection Agency",
+        "openDate": "12/14/2023",
+        "closeDate": "02/13/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "66.461"
+        ]
+    },
+    {
+        "id": "351489",
+        "number": "FY2024VE005",
+        "title": "2024-25 EdUSA Opportunity Funds Program for Graduate Study",
+        "agencyCode": "DOS-VEN",
+        "agency": "U.S. Mission to Venezuela",
+        "openDate": "12/14/2023",
+        "closeDate": "05/01/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "19.040"
+        ]
+    },
+    {
+        "id": "351480",
+        "number": "FY2024VE004",
+        "title": "EducationUSA Professional College Counselor Network Program",
+        "agencyCode": "DOS-VEN",
+        "agency": "U.S. Mission to Venezuela",
+        "openDate": "12/14/2023",
+        "closeDate": "03/01/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "19.040"
+        ]
+    },
+    {
+        "id": "351486",
+        "number": "PDS-LILONGWE-FY24-APS01",
+        "title": "U.S. Embassy Lilongwe Public Diplomacy Section Annual Program Statement",
+        "agencyCode": "DOS-MWI",
+        "agency": "U.S. Mission to Malawi",
+        "openDate": "12/14/2023",
+        "closeDate": "05/31/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "19.040"
+        ]
+    },
+    {
+        "id": "351485",
+        "number": "INL24SOI0018-CIVILSOCIETYWATCHDOGS",
+        "title": "Building Capacity of Civil Society Watchdogs",
+        "agencyCode": "DOS-INL",
+        "agency": "Bureau of International Narcotics-Law Enforcement",
+        "openDate": "12/14/2023",
+        "closeDate": "01/30/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "19.703"
+        ]
+    },
+    {
+        "id": "351483",
+        "number": "24-518",
+        "title": "Collaborations in Artificial Intelligence and Geosciences",
+        "agencyCode": "NSF",
+        "agency": "National Science Foundation",
+        "openDate": "12/14/2023",
+        "closeDate": "03/15/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "47.049",
+            "47.070",
+            "47.050"
+        ]
+    },
+    {
+        "id": "351481",
+        "number": "24-511",
+        "title": "NSF Scholarships in Science, Technology, Engineering, and Mathematics Program",
+        "agencyCode": "NSF",
+        "agency": "National Science Foundation",
+        "openDate": "12/14/2023",
+        "closeDate": "03/11/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "47.076"
+        ]
+    },
+    {
+        "id": "351482",
+        "number": "24-517",
+        "title": "Partnerships for Research Innovation in the Mathematical Sciences",
+        "agencyCode": "NSF",
+        "agency": "National Science Foundation",
+        "openDate": "12/14/2023",
+        "closeDate": "03/11/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "47.049"
+        ]
+    },
+    {
+        "id": "351484",
+        "number": "24-519",
+        "title": "Strengthening American Infrastructure",
+        "agencyCode": "NSF",
+        "agency": "National Science Foundation",
+        "openDate": "12/14/2023",
+        "closeDate": "03/12/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "47.050",
+            "47.075",
+            "47.084",
+            "47.070",
+            "47.079",
+            "47.083",
+            "47.041",
+            "47.049",
+            "47.076",
+            "47.074"
+        ]
+    },
+    {
+        "id": "351487",
+        "number": "72066324RFA00003",
+        "title": "USAID Market for Sanitation Activity",
+        "agencyCode": "USAID-ETH",
+        "agency": "Ethiopia USAID-Addis Ababa ",
+        "openDate": "12/14/2023",
+        "closeDate": "02/15/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "98.001"
+        ]
+    },
+    {
+        "id": "351492",
+        "number": "NNH23ZDA001N-CRC",
+        "title": "ROSES 2023: A.67 Earth Action: Supporting Climate Resilient Communities",
+        "agencyCode": "NASA-HQ",
+        "agency": "NASA Headquarters",
+        "openDate": "12/14/2023",
+        "closeDate": "05/03/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "43.001"
+        ]
+    },
+    {
+        "id": "351496",
+        "number": "NNH23ZDA001N-EEJ",
+        "title": "ROSES 2023: A.47 Earth Action: Community Action for Equity and Environmental Justice",
+        "agencyCode": "NASA-HQ",
+        "agency": "NASA Headquarters",
+        "openDate": "12/14/2023",
+        "closeDate": "03/14/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "43.001"
+        ]
+    },
+    {
+        "id": "351491",
+        "number": "20241127-RQ",
+        "title": "Scholarly Editions and Translations",
+        "agencyCode": "NEH",
+        "agency": "National Endowment for the Humanities",
+        "openDate": "12/14/2023",
+        "closeDate": "",
+        "oppStatus": "forecasted",
+        "docType": "forecast",
+        "cfdaList": [
+            "45.161"
+        ]
+    },
+    {
+        "id": "351490",
+        "number": "20241127-FZ",
+        "title": "Public Scholars",
+        "agencyCode": "NEH",
+        "agency": "National Endowment for the Humanities",
+        "openDate": "12/14/2023",
+        "closeDate": "",
+        "oppStatus": "forecasted",
+        "docType": "forecast",
+        "cfdaList": [
+            "45.160"
+        ]
+    },
+    {
+        "id": "350453",
+        "number": "RFA-IP-24-045",
+        "title": "Network of Community Cohorts for Monitoring Changes in Respiratory Virus Epidemiology (Pandemic Preparedness Cohorts)",
+        "agencyCode": "HHS-CDC-HHSCDCERA",
+        "agency": "Centers for Disease Control and Prevention - ERA",
+        "openDate": "12/14/2023",
+        "closeDate": "02/20/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "93.083"
+        ]
+    },
+    {
+        "id": "351514",
+        "number": "RFA-GH-24-033",
+        "title": "Advancing Public Health Research in Bangladesh",
+        "agencyCode": "HHS-CDC-HHSCDCERA",
+        "agency": "Centers for Disease Control and Prevention - ERA",
+        "openDate": "12/14/2023",
+        "closeDate": "03/08/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "93.326"
+        ]
+    },
+    {
+        "id": "351515",
+        "number": "NOAA-OAR-SG-2024-24700",
+        "title": "FY2024 Sea Grant Programs Only - FY2024 Aquaculture Technologies and Education Travel Grants",
+        "agencyCode": "DOC-DOCNOAAERA",
+        "agency": "DOC NOAA - ERA Production",
+        "openDate": "12/14/2023",
+        "closeDate": "03/20/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "11.417"
+        ]
+    },
+    {
+        "id": "351498",
+        "number": "NOAA-OAR-SG-2024-24695",
+        "title": "FY2024 Sea Grant Programs Only - Regional Aquaculture Communications/Literacy Collaboratives",
+        "agencyCode": "DOC-DOCNOAAERA",
+        "agency": "DOC NOAA - ERA Production",
+        "openDate": "12/14/2023",
+        "closeDate": "04/10/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "11.417"
+        ]
+    },
+    {
+        "id": "351495",
+        "number": "RFA-CA-24-016",
+        "title": "Development of Innovative Informatics Methods and Algorithms for Cancer Research and Management (R21 Clinical Trial Optional)",
+        "agencyCode": "HHS-NIH11",
+        "agency": "National Institutes of Health",
+        "openDate": "12/14/2023",
+        "closeDate": "11/15/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "93.393",
+            "93.396",
+            "93.399",
+            "93.394",
+            "93.395"
+        ]
+    },
+    {
+        "id": "351506",
+        "number": "DE-FOA-0003226",
+        "title": "Solar Energy Evolution and Diffusion Studies 4 (SEEDS 4)",
+        "agencyCode": "DOE-GFO",
+        "agency": "Golden Field Office",
+        "openDate": "12/14/2023",
+        "closeDate": "03/15/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "81.087"
+        ]
+    },
+    {
+        "id": "351500",
+        "number": "20240201-HBI",
+        "title": "Awards for Faculty Institutional Support HBCUs and TCUs",
+        "agencyCode": "NEH",
+        "agency": "National Endowment for the Humanities",
+        "openDate": "12/14/2023",
+        "closeDate": "05/01/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "45.161"
+        ]
+    },
+    {
+        "id": "351501",
+        "number": "RFA-CA-24-018",
+        "title": "Advanced Development of Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
+        "agencyCode": "HHS-NIH11",
+        "agency": "National Institutes of Health",
+        "openDate": "12/14/2023",
+        "closeDate": "11/15/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "93.396",
+            "93.399",
+            "93.393",
+            "93.394",
+            "93.395"
+        ]
+    },
+    {
+        "id": "351499",
+        "number": "RFA-CA-24-017",
+        "title": "Early-Stage Development of Informatics Technologies for Cancer Research and Management (U01 Clinical Trial Optional)",
+        "agencyCode": "HHS-NIH11",
+        "agency": "National Institutes of Health",
+        "openDate": "12/14/2023",
+        "closeDate": "11/15/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "93.396",
+            "93.399",
+            "93.393",
+            "93.394",
+            "93.395"
+        ]
+    },
+    {
+        "id": "351497",
+        "number": "20241127-RZ",
+        "title": "Collaborative Research",
+        "agencyCode": "NEH",
+        "agency": "National Endowment for the Humanities",
+        "openDate": "12/14/2023",
+        "closeDate": "",
+        "oppStatus": "forecasted",
+        "docType": "forecast",
+        "cfdaList": [
+            "45.161"
+        ]
+    },
+    {
+        "id": "351512",
+        "number": "F24AS00160",
+        "title": "F24AS00160 - Tortoise and Freshwater Turtle Fund",
+        "agencyCode": "DOI-FWS",
+        "agency": "Fish and Wildlife Service",
+        "openDate": "12/14/2023",
+        "closeDate": "02/19/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "15.645"
+        ]
+    },
+    {
+        "id": "351508",
+        "number": "OFOP0001267",
+        "title": "Employability Skills for At Risk Youth to Prevent Crime and Violence",
+        "agencyCode": "DOS-INL",
+        "agency": "Bureau of International Narcotics-Law Enforcement",
+        "openDate": "12/14/2023",
+        "closeDate": "02/14/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "19.704"
+        ]
+    },
+    {
+        "id": "351505",
+        "number": "RFA-CA-24-019",
+        "title": "Sustained Support for Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
+        "agencyCode": "HHS-NIH11",
+        "agency": "National Institutes of Health",
+        "openDate": "12/14/2023",
+        "closeDate": "11/15/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "93.395",
+            "93.393",
+            "93.399",
+            "93.394",
+            "93.396"
+        ]
+    },
+    {
+        "id": "351510",
+        "number": "O-OVW-2024-171905",
+        "title": "OVW Fiscal Year 2024 Legal Assistance for Victims Grant Program Expanding Legal Services Initiative",
+        "agencyCode": "USDOJ-OJP-OVW",
+        "agency": "Office on Violence Against Women",
+        "openDate": "12/14/2023",
+        "closeDate": "02/13/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "16.524"
+        ]
+    },
+    {
+        "id": "351511",
+        "number": "O-OVW-2024-171904",
+        "title": "OVW Fiscal Year 2024 Legal Assistance for Victims",
+        "agencyCode": "USDOJ-OJP-OVW",
+        "agency": "Office on Violence Against Women",
+        "openDate": "12/14/2023",
+        "closeDate": "02/13/2024",
+        "oppStatus": "posted",
+        "docType": "synopsis",
+        "cfdaList": [
+            "16.524"
+        ]
+    }
+]
