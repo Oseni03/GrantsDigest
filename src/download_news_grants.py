@@ -94,32 +94,11 @@ def grant_detail(id="350938"):
 
 
 # Extracting fields
-agency_fields = ["agencyName", "code", "seed"]
-applicant_type_fields = ["description", "slug"]
-funding_instrument_fields = ["description", "abbrv", "slug"]
-funding_activity_category_fields = ["description", "abbrv", "slug"]
 synopsis_fields = [
     "opportunity_id",
-    "agency_code",
-    "agency_name",
-    "agency_phone",
-    "agency_address_desc",
-    "agency_contact_phone",
-    "agency_contact_name",
-    "agency_contact_desc",
-    "agency_contact_email",
     "description",
-    "response_date",
-    "posting_date",
-    "archive_date",
-    "cost_sharing",
-    "award_ceiling",
-    "award_ceiling_formatted",
-    "award_floor",
-    "award_floor_formatted",
     "applicant_eligibilty_desc",
-    "created_date",
-    "updated_date",
+    "applicant_types",
 ]
 
 
@@ -148,30 +127,23 @@ def output_csv(data_dir="src/data/synopsis", today=date.today().strftime("%Y-%m-
 
                 # Write data to CSV file
             for grant in full_data:
+                applicant_types = ""
+                try:
+                    for type in grant["synopsis"]["applicantTypes"]:
+                        applicant_types += f'{type.get("description", "")},'
+                except:
+                    pass
                 try:
                     writer.writerow(
                         {
-                            "opportunity_id": grant["synopsis"].get("opportunityId", ""),
-                            "agency_code": grant["synopsis"].get("agencyCode", ""),
-                            "agency_name": grant["synopsis"].get("agencyName", ""),
-                            "agency_phone": grant["synopsis"].get("agencyPhone", ""),
-                            "agency_address_desc": grant["synopsis"].get("agencyAddressDesc", ""),
-                            "agency_contact_phone": grant["synopsis"].get("agencyContactPhone", ""),
-                            "agency_contact_name": grant["synopsis"].get("agencyContactName", ""),
-                            "agency_contact_desc": grant["synopsis"].get("agencyContactDesc", ""),
-                            "agency_contact_email": grant["synopsis"].get("agencyContactEmail", ""),
+                            "opportunity_id": grant["synopsis"].get(
+                                "opportunityId", ""
+                            ),
                             "description": grant["synopsis"].get("synopsisDesc", ""),
-                            "response_date": grant["synopsis"].get("responseDate", ""),
-                            "posting_date": grant["synopsis"].get("postingDate", ""),
-                            "archive_date": grant["synopsis"].get("archiveDate", ""),
-                            "cost_sharing": grant["synopsis"].get("costSharing", ""),
-                            "award_ceiling": grant["synopsis"].get("awardCeiling", ""),
-                            "award_ceiling_formatted": grant["synopsis"].get("awardCeilingFormatted", ""),
-                            "award_floor": grant["synopsis"].get("awardFloor", ""),
-                            "award_floor_formatted": grant["synopsis"].get("awardFloorFormatted", ""),
-                            "applicant_eligibilty_desc": grant["synopsis"].get("applicantEligibilityDesc", ""),
-                            "created_date": grant["synopsis"].get("createdDate", ""),
-                            "updated_date": grant["synopsis"].get("lastUpdatedDate", ""),
+                            "applicant_eligibilty_desc": grant["synopsis"].get(
+                                "applicantEligibilityDesc", ""
+                            ),
+                            "applicant_types": applicant_types,
                         }
                     )
                 except:
