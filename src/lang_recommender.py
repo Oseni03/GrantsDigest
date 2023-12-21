@@ -16,7 +16,9 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.document_loaders.csv_loader import CSVLoader
 
 
-def data_processing(data_dir="src/data/synopsis", today=date.today().strftime("%Y-%m-%d")):
+def data_processing(
+    data_dir="src/data/synopsis", today=date.today().strftime("%Y-%m-%d")
+):
     data = pd.read_csv(f"{data_dir}/{today}.csv")
     data["description"] = data.apply(
         lambda row: f"Synopsis Description: {row['description']}. Applicant Eligibility Description: {row['applicant_eligibilty_desc']}. Applicant Types: {row['applicant_types']}",
@@ -42,3 +44,12 @@ def data_processing(data_dir="src/data/synopsis", today=date.today().strftime("%
             # Write the extracted fields to the output file
             writer.writerow(output_row)
     return outfile
+
+
+def get_documents(csv_path):
+    loader = CSVLoader(file_path=csv_path)
+    data = loader.load()
+
+    # data transformers
+    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+    return text_splitter.split_documents(data)
