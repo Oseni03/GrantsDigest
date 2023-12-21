@@ -137,7 +137,7 @@ def output_csv(data_dir="src/data/synopsis", today=date.today().strftime("%Y-%m-
 
     for data in full_data:
         with open(
-            f"{data_dir}/{today}.csv", mode="w+", newline="", encoding="utf-8"
+            f"{data_dir}/{today}.csv", mode="w", newline="", encoding="utf-8"
         ) as file:
             writer = csv.DictWriter(file, fieldnames=synopsis_fields)
 
@@ -148,37 +148,34 @@ def output_csv(data_dir="src/data/synopsis", today=date.today().strftime("%Y-%m-
 
                 # Write data to CSV file
             for grant in full_data:
-                writer.writerow(
-                    {
-                        "opportunity_id": grant["synopsis"]["opportunityId"],
-                        "agency_code": grant["synopsis"]["agencyCode"],
-                        "agency_name": grant["synopsis"]["agencyName"],
-                        "agency_phone": grant["synopsis"]["agencyPhone"],
-                        "agency_address_desc": grant["synopsis"]["agencyAddressDesc"],
-                        "agency_contact_phone": grant["synopsis"]["agencyContactPhone"],
-                        "agency_contact_name": grant["synopsis"]["agencyContactName"],
-                        "agency_contact_desc": grant["synopsis"]["agencyContactDesc"],
-                        "agency_contact_email": grant["synopsis"]["agencyContactEmail"],
-                        "description": grant["synopsis"]["synopsisDesc"],
-                        "response_date": grant["synopsis"]["responseDate"],
-                        "posting_date": grant["synopsis"]["postingDate"],
-                        "archive_date": grant["synopsis"]["archiveDate"],
-                        "cost_sharing": grant["synopsis"]["costSharing"],
-                        "award_ceiling": grant["synopsis"]["awardCeiling"],
-                        "award_ceiling_formatted": grant["synopsis"][
-                            "awardCeilingFormatted"
-                        ],
-                        "award_floor": grant["synopsis"]["awardFloor"],
-                        "award_floor_formatted": grant["synopsis"][
-                            "awardFloorFormatted"
-                        ],
-                        "applicant_eligibilty_desc": grant["synopsis"][
-                            "applicantEligibilityDesc"
-                        ],
-                        "created_date": grant["synopsis"]["createdDate"],
-                        "updated_date": grant["synopsis"]["lastUpdatedDate"],
-                    }
-                )
+                try:
+                    writer.writerow(
+                        {
+                            "opportunity_id": grant["synopsis"].get("opportunityId", ""),
+                            "agency_code": grant["synopsis"].get("agencyCode", ""),
+                            "agency_name": grant["synopsis"].get("agencyName", ""),
+                            "agency_phone": grant["synopsis"].get("agencyPhone", ""),
+                            "agency_address_desc": grant["synopsis"].get("agencyAddressDesc", ""),
+                            "agency_contact_phone": grant["synopsis"].get("agencyContactPhone", ""),
+                            "agency_contact_name": grant["synopsis"].get("agencyContactName", ""),
+                            "agency_contact_desc": grant["synopsis"].get("agencyContactDesc", ""),
+                            "agency_contact_email": grant["synopsis"].get("agencyContactEmail", ""),
+                            "description": grant["synopsis"].get("synopsisDesc", ""),
+                            "response_date": grant["synopsis"].get("responseDate", ""),
+                            "posting_date": grant["synopsis"].get("postingDate", ""),
+                            "archive_date": grant["synopsis"].get("archiveDate", ""),
+                            "cost_sharing": grant["synopsis"].get("costSharing", ""),
+                            "award_ceiling": grant["synopsis"].get("awardCeiling", ""),
+                            "award_ceiling_formatted": grant["synopsis"].get("awardCeilingFormatted", ""),
+                            "award_floor": grant["synopsis"].get("awardFloor", ""),
+                            "award_floor_formatted": grant["synopsis"].get("awardFloorFormatted", ""),
+                            "applicant_eligibilty_desc": grant["synopsis"].get("applicantEligibilityDesc", ""),
+                            "created_date": grant["synopsis"].get("createdDate", ""),
+                            "updated_date": grant["synopsis"].get("lastUpdatedDate", ""),
+                        }
+                    )
+                except:
+                    pass
 
     print(f"Data has been written to {today}.csv")
 
