@@ -5,13 +5,9 @@ import tiktoken
 import pandas as pd
 
 from datetime import date
-from openai.embeddings_utils import get_embedding
 
-from langchain.llms import OpenAI
-from langchain.chains import RetrievalQA
 from langchain.vectorstores import Chroma
 from langchain.embeddings import FakeEmbeddings
-from langchain.document_loaders import TextLoader
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.document_loaders.csv_loader import CSVLoader
@@ -83,3 +79,8 @@ def text_embedding(
             docs, embedding_function, persist_directory=today_db_file
         )
     return db
+
+
+def get_similarity_docs(db, texts):
+    docs = db.similarity_search(texts)
+    return docs
