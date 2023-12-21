@@ -3,6 +3,7 @@ import json
 import csv
 import os
 import requests
+from pprint import pprint
 from datetime import date
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup
@@ -106,48 +107,61 @@ def slugify(text: str):
     return text.lower().replace(" ", "_")
 
 
-def output_csv(data_dir="src/data/synopsis", today=date.today().strftime("%Y-%m-%d")):
+def output_csv(data_dir="src/data/synopsis", today=None):
+    if today is None:
+        today = date.today().strftime("%Y-%m-%d")
+
     if not os.path.exists(data_dir):
         os.makedirs(data_dir)
+
+    synopsis_fields = [
+        "opportunity_id",
+        "description",
+        "applicant_eligibilty_desc",
+        "applicant_types",
+    ]
 
     # Write data to CSV
     with open("src/data/details.json", "r") as file:
         full_data = json.load(file)
 
-    for data in full_data:
+    for grant in full_data:
         with open(
             f"{data_dir}/{today}.csv", mode="w", newline="", encoding="utf-8"
         ) as file:
             writer = csv.DictWriter(file, fieldnames=synopsis_fields)
+            writer.writeheader()
 
-            with open(f"{data_dir}/{today}.csv", newline="") as csvfile:
-                reader = csv.DictReader(csvfile)
-                if not reader:
-                    writer.writeheader()
+            # Write data to CSV file
+            applicant_types = ""
+            try:
+                applicant_types = ",".join(
+                    [
+                        type.get("description", "")
+                        for type in grant.get("synopsis", {}).get("applicantTypes", [])
+                    ]
+                    + [
+                        type.get("description", "")
+                        for type in grant.get("forecast", {}).get("applicantTypes", [])
+                    ]
+                )
+            except Exception as e:
+                print(f"Error occurred: {e}")
+                pass
 
-                # Write data to CSV file
-            for grant in full_data:
-                applicant_types = ""
-                try:
-                    for type in grant["synopsis"]["applicantTypes"]:
-                        applicant_types += f'{type.get("description", "")},'
-                except:
-                    pass
-                try:
-                    writer.writerow(
-                        {
-                            "opportunity_id": grant["synopsis"].get(
-                                "opportunityId", ""
-                            ),
-                            "description": grant["synopsis"].get("synopsisDesc", ""),
-                            "applicant_eligibilty_desc": grant["synopsis"].get(
-                                "applicantEligibilityDesc", ""
-                            ),
-                            "applicant_types": applicant_types,
-                        }
+            writer.writerow(
+                {
+                    "opportunity_id": grant.get("synopsis", {}).get("opportunityId", "")
+                    or grant.get("forecast", {}).get("opportunityId", ""),
+                    "description": grant.get("synopsis", {}).get("synopsisDesc", "")
+                    or grant.get("forecast", {}).get("synopsisDesc", ""),
+                    "applicant_eligibilty_desc": grant.get("forecast", {}).get(
+                        "applicantEligibilityDesc", ""
                     )
-                except:
-                    pass
+                    or grant.get("synopsis", {}).get("applicantEligibilityDesc", ""),
+                    "applicant_types": applicant_types,
+                }
+            )
 
     print(f"Data has been written to {today}.csv")
 
