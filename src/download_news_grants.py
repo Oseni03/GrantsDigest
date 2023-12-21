@@ -1,7 +1,9 @@
 import asyncio
 import json
 import csv
+import os
 import requests
+from datetime import date
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup
 
@@ -92,43 +94,93 @@ def grant_detail(id="350938"):
 
 
 # Extracting fields
-fields_to_write = [
-    "opportunityId", "agencyDetails", "agencyName", "agencyPhone", "agencyAddressDesc",
-    "synopsisDesc", "postingDate", "archiveDate", "fundingActivityCategoryDesc",
-    "numberOfAwards", "estimatedFunding", "awardCeiling", "awardFloor",
-    "applicantEligibilityDesc", "applicantTypes", "fundingInstruments",
-    "fundingActivityCategories"
+agency_fields = ["agencyName", "code", "seed"]
+applicant_type_fields = ["description", "slug"]
+funding_instrument_fields = ["description", "abbrv", "slug"]
+funding_activity_category_fields = ["description", "abbrv", "slug"]
+synopsis_fields = [
+    "opportunity_id",
+    "agency_code",
+    "agency_name",
+    "agency_phone",
+    "agency_address_desc",
+    "agency_contact_phone",
+    "agency_contact_name",
+    "agency_contact_desc",
+    "agency_contact_email",
+    "description",
+    "response_date",
+    "posting_date",
+    "archive_date",
+    "cost_sharing",
+    "award_ceiling",
+    "award_ceiling_formatted",
+    "award_floor",
+    "award_floor_formatted",
+    "applicant_eligibilty_desc",
+    "created_date",
+    "updated_date",
 ]
 
-# Function to extract nested fields
-def extract_nested_fields(data, field):
-    value = data
-    for key in field.split('.'):
-        if isinstance(value, dict) and key in value:
-            value = value[key]
-        else:
-            return None
-    return value
 
-def output_csv(csv_filename="src/data/output.csv"):
+def slugify(text: str):
+    return text.lower().replace(" ", "_")
+
+
+def output_csv(data_dir="src/data/synopsis", today=date.today().strftime("%Y-%m-%d")):
+    if not os.path.exists(data_dir):
+        os.makedirs(data_dir)
+
     # Write data to CSV
-    with open(csv_filename, mode='w', newline='', encoding='utf-8') as file:
-        writer = csv.DictWriter(file, fieldnames=fields_to_write)
-        writer.writeheader()
+    with open("src/data/details.json", "r") as file:
+        full_data = json.load(file)
 
-        # Write data to CSV file
-        row = {}
+    for data in full_data:
+        with open(
+            f"{data_dir}/{today}.csv", mode="w+", newline="", encoding="utf-8"
+        ) as file:
+            writer = csv.DictWriter(file, fieldnames=synopsis_fields)
 
-        with open("src/data/details.json", "r") as file:
-            full_data = json.load(file)
+            with open(f"{data_dir}/{today}.csv", newline="") as csvfile:
+                reader = csv.DictReader(csvfile)
+                if not reader:
+                    writer.writeheader()
 
-        for data in full_data:
-            for field in fields_to_write:
-                extracted_value = extract_nested_fields(data, field)
-                row[field] = json.dumps(extracted_value) if isinstance(extracted_value, (list, dict)) else extracted_value
-            writer.writerow(row)
+                # Write data to CSV file
+            for grant in full_data:
+                writer.writerow(
+                    {
+                        "opportunity_id": grant["synopsis"]["opportunityId"],
+                        "agency_code": grant["synopsis"]["agencyCode"],
+                        "agency_name": grant["synopsis"]["agencyName"],
+                        "agency_phone": grant["synopsis"]["agencyPhone"],
+                        "agency_address_desc": grant["synopsis"]["agencyAddressDesc"],
+                        "agency_contact_phone": grant["synopsis"]["agencyContactPhone"],
+                        "agency_contact_name": grant["synopsis"]["agencyContactName"],
+                        "agency_contact_desc": grant["synopsis"]["agencyContactDesc"],
+                        "agency_contact_email": grant["synopsis"]["agencyContactEmail"],
+                        "description": grant["synopsis"]["synopsisDesc"],
+                        "response_date": grant["synopsis"]["responseDate"],
+                        "posting_date": grant["synopsis"]["postingDate"],
+                        "archive_date": grant["synopsis"]["archiveDate"],
+                        "cost_sharing": grant["synopsis"]["costSharing"],
+                        "award_ceiling": grant["synopsis"]["awardCeiling"],
+                        "award_ceiling_formatted": grant["synopsis"][
+                            "awardCeilingFormatted"
+                        ],
+                        "award_floor": grant["synopsis"]["awardFloor"],
+                        "award_floor_formatted": grant["synopsis"][
+                            "awardFloorFormatted"
+                        ],
+                        "applicant_eligibilty_desc": grant["synopsis"][
+                            "applicantEligibilityDesc"
+                        ],
+                        "created_date": grant["synopsis"]["createdDate"],
+                        "updated_date": grant["synopsis"]["lastUpdatedDate"],
+                    }
+                )
 
-    print(f"Data has been written to {csv_filename}")
+    print(f"Data has been written to {today}.csv")
 
 
 if __name__ == "__main__":
