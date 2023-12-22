@@ -7,6 +7,7 @@ import pandas as pd
 from datetime import date
 
 from langchain.vectorstores import Chroma
+from langchain.vectorstores import FAISS
 from langchain.embeddings import FakeEmbeddings
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
@@ -35,7 +36,6 @@ def data_processing(data_dir="src/data/synopsis"):
 
         for _, row in data.iterrows():
             row = row.to_dict()
-            print(row)
             # Extract the desired fields from each row
             output_row = {
                 "opportunity_id": row["opportunity_id"],
@@ -73,13 +73,10 @@ def text_embedding(
     today_db_file = os.path.join(data_dir, f"{today}_db")
 
     if os.path.exists(today_db_file):
-        db = Chroma(
-            persist_directory=today_db_file, embedding_function=embedding_function
-        )
+        db = FAISS.load_local(today_db_file, embedding_function)
     else:
-        db = Chroma.from_documents(
-            docs, embedding_function, persist_directory=today_db_file
-        )
+        db = FAISS.from_documents(docs, embedding_function)
+        db.save_local(today_db_file)
     return db
 
 
@@ -126,4 +123,6 @@ No previous grants or external funding received; self-funded since inception in 
     similarity_docs = get_similarity_docs(db, business_description)
     import pprint
 
-    pprint.pprint(similarity_docs)
+    for doc in similarity_docs:
+        print()
+        print(doc.page_content)
